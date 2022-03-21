@@ -1,9 +1,11 @@
-const addTodo = (id,text) => {
+const addTodo = (id,header,description,completed) => {
     return{
         type: 'ADD_TODO',
         payload:{
             id: id,
-            text: text,
+            header: header,
+            description: description,
+            completed: completed,
         }
     }
 }

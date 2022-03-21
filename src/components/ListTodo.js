@@ -8,7 +8,12 @@ const ListTodo = () => {
   return (
     <Item.Group divided>
         {listTodo.map((itemTodo) => (
-            <ItemTodo key={itemTodo.id} text={itemTodo.text}/>
+            <ItemTodo 
+                  key={itemTodo.id} 
+                  header={itemTodo.header} 
+                  description={itemTodo.description} 
+                  completed={itemTodo.completed}
+            />
         ))}
     </Item.Group>
   )
