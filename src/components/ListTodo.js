@@ -1,21 +1,16 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
+import { Item } from 'semantic-ui-react'
+import ItemTodo from './ItemTodo'
 
 const ListTodo = () => {
   const listTodo = useSelector(state => state.todo) 
   return (
-    <div>
-      <br></br>
-      <ol>
-        {listTodo.map((todo) => (
-          <li 
-            key={todo.id}
-            style={{fontSize:"30px", marginTop:'20px'}}>
-              {todo.text}
-          </li>
+    <Item.Group divided>
+        {listTodo.map((itemTodo) => (
+            <ItemTodo key={itemTodo.id} text={itemTodo.text}/>
         ))}
-      </ol>
-    </div>
+    </Item.Group>
   )
 }
 
