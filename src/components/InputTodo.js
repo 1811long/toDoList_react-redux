@@ -35,17 +35,10 @@ const InputTodo = () => {
 
   return (
     <Form>
-        <label
-          style={{
-            fontSize: "25px"
-          }}  
-        >
-          Enter a todo here
-        </label>
-        <hr/>
         <Form.Input
-          placeholder='Enter your todo'
+          placeholder='Enter a header for your todo'
           value={header}
+          label='Title'
           onChange={(e) => headerChange(e)}
         />
 
@@ -58,6 +51,7 @@ const InputTodo = () => {
         />
 
         <Form.Button content='Add todo' onClick={onAddTodo}/>
+        <br></br>
     </Form>
   )
 }
